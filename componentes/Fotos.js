@@ -10,7 +10,7 @@ z-index: 1;
 padding-top: ${props => props.top};
 padding-left: ${props => props.left};
 @media (max-width: 768px) {
-    height:300px;
+    height:330px;
 }
 @media (max-width: 568px) {
     padding-top: 10%;
@@ -36,7 +36,7 @@ padding-left: ${props => props.left};
 }
 `
 const MolduraRedonda1 = styled.div`
-width: 60%;
+width: 62.5%;
 height: 50%;
 background-color: ${({ theme }) => theme.colors.pink}; 
 border-radius: 100%;
@@ -45,7 +45,7 @@ opacity: 80%;
 z-index: 2;
 `
 const MolduraRedonda2 = styled.div`
-width: 60%;
+width: 62.5%;
 height: 50%;
 background-color: ${({ theme }) => theme.colors.moldurayellow}; 
 border-radius: 100%;
@@ -55,7 +55,7 @@ opacity: 80%;
 z-index: 3;
 `
 const MolduraRedonda3 = styled.div`
-width: 60%;
+width: 62.5%;
 height: 50%;
 background-color: ${({ theme }) => theme.colors.lightblue}; 
 border-radius: 100%;
@@ -63,7 +63,7 @@ position: absolute;
 margin-top: 10%;
 `
 const MolduraRedonda4 = styled.div`
-width: 60%;
+width: 62.5%;
 height: 50%;
 background-color:${({theme}) => theme.colors.purple};
 border-radius: 100%;
@@ -72,7 +72,7 @@ margin-top: 10%;
 margin-left: 10%;
 `
 const Moldurafoto = styled.div`
-width: 60%;
+width: 62.5%;
 height: 50%;
 border-radius: 100%;
 position: absolute;
@@ -82,7 +82,8 @@ margin-left: 5%;
 z-index: 4;
 img{
     width: 100%;
-    height: 105%;
+
+    transform: translateY(-15%);
 }
 `
 const MolduraRet1 = styled.div`
@@ -158,7 +159,7 @@ export function FotoPerfil(props) {
             <MolduraRedonda2 />
             <MolduraRedonda3 />
             <MolduraRedonda4 />
-            <Moldurafoto><img src=".\static\0.jpg" alt="myimageperfil" /></Moldurafoto>
+            <Moldurafoto><img src=".\static\foto_perfil.jpg" alt="myimageperfil" /></Moldurafoto>
         </Photo>
     )
 }

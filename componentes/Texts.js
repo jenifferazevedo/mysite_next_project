@@ -69,6 +69,30 @@ padding-left: 10%;
     padding-top: 5%;
 }
 `
+const Text3 = styled.p`
+font-size: ${props => props.size};
+color: ${({ theme }) => theme.colors.purpleblack};
+height: 40px;
+line-height: 1.4;
+text-align: left;
+text-transform: initial;
+font-family: 'Helvetica';
+padding-top: ${props => props.top};
+padding-left: ${props => props.left};
+padding-bottom: 20%;
+a {
+    color: ${({ theme }) => theme.colors.purpleblack};
+}
+@media (max-width: 768px) {
+    font-size: ${props => props.sizemediatablet};
+    padding-top: ${props => props.toptablet};
+}
+@media (max-width: 568px) {
+    font-size: 4vw;
+    padding-top: 4%;
+    padding-left: 20%;
+}
+`
 const Titles =styled.div`
 width: 60%;
 font-size: 3vw;
@@ -125,8 +149,15 @@ padding-left: ${props => props.left};
 padding-top: ${props => props.top};
 margin:0;
 line-height: 1;
+a{
+    color: ${({ theme }) => theme.colors.yellow};
+    :hover {
+        color: ${({ theme }) => theme.colors.purple}
+    }
+}
 @media (max-width: 568px) {
     padding-left: 30%;
+    font-size: ${props => props.sizemobile}
 }
 `
 const Palavrarosa =styled.p`
@@ -196,10 +227,29 @@ export function PalavrasColoridas(props) {
     )
 }
 
-export function PalavraAzul(props) {
+export function Palavracor(props) {
     return (
         <div>
-            <Palavraamarela size="2.5vw" align="right" top="5%">{props.word1}</Palavraamarela><br/>
+        <Palavraazul size="2vw" left="20%">{props.word1}</Palavraazul><br/>
+        <Palavraroxa size="2vw" left="20%">{props.word2}</Palavraroxa><br/>
+        <Palavraamarela size="2vw" left="20%">{props.word3}</Palavraamarela><br />
+        <Palavrarosa size="2vw" left="20%">{props.word4}</Palavrarosa>
+        </div>
+    )        
+}
+
+export function Palavra(props) {
+    return (
+        <div>
+            <Palavraamarela size="2.5vw" align="right" top="5%" sizemobile="4vw"><a href="https://github.com/jenifferazevedo/mysite_next_project" target="_blank">{props.word1}</a></Palavraamarela>
+        </div>
+    )
+}
+
+export function Textocards(props) {
+    return (
+        <div>
+            <Text3 top={props.paddingTop} size={props.fontsize} sizemediatablet={props.tablettextsize} sizemediamobile={props.mobilesize} left={props.paddingleft} toptablet={props.padtoptablet} topmobile={props.padtopmobile}><a href={props.linksite} target="_blank">{props.textp1}<br />{props.textp2}<br />{props.textp3}<br />{props.textp4}<br />{props.textp5}</a></Text3>
         </div>
     )
 }

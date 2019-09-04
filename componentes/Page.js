@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'antd';
-import {Firstsectiontext, Subtitles, Textperfil, Texttitles, PalavrasColoridas, Texto} from './Texts';
+import {Firstsectiontext, Subtitles, Textperfil, Texttitles, PalavrasColoridas, Texto, Palavra} from './Texts';
 import {Vejamais} from './Mybutton';
 import {FotoPerfil, Imagemretangular} from './Fotos';
 import {Icons} from './Icons';
@@ -28,10 +28,10 @@ height: 100vh;
 background: ${({ theme }) => theme.colors.background2};
 overflow: hidden;
 @media (max-width: 768px) {
-    height: 768px;
+    height: 980px;
 }
 @media (max-width: 568px) {
-    height: 550px;
+    height: 1300px;
 }
 `
 const Sectionywhite = styled.div`
@@ -43,7 +43,7 @@ overflow: hidden;
     height: 520px;
 }
 @media (max-width: 568px) {
-    height: 720px;
+    height: 760px;
 }
 `
 const Sectionpurple = styled.div`
@@ -87,6 +87,9 @@ export default function Page(props) {
                         <Textperfil textp1="Olá! Meu nome é Jeniffer.  Amo a tecnologia e o design!" textp2="Tenho experiencia e conhecimento em: 
                         Photoshop, Illustrator, Adobe XD, GitHub, HTML, CSS, Bootstrap, Javascript, React.js, Next.js. 
                         Estou sempre a aprender e me atualizar nas novas tecnologias para melhorar cada projeto!" />
+                        </Row>
+                        <Row>
+                        <Palavra word1="Site desenvolvido em Next.js!" href="https://github.com/jenifferazevedo/mysite_next_project"/>
                         </Row>
                     </Col>
                     <Col lg={2} md={2}>
